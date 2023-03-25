@@ -1,9 +1,9 @@
 
 const handleApiCall = (req, res) => {
-  const PAT = 'ffe67f6f20cd4de5aef921dfd72cc5fa';
+  const PAT = process.env.API_CLARIFAI;
   // Specify the correct user_id/app_id pairings
   // Since you're making inferences outside your app's scope
-  const USER_ID = 'tjpaulino89';       
+  const USER_ID = process.env.API_CLARIFAI_USER;       
   const APP_ID = 'Face-Detection';
   // Change these to whatever model and image URL you want to use
   const MODEL_ID = 'face-detection';
