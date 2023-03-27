@@ -8,15 +8,17 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
+
 const db = knex({
   client: 'pg',
   connection: {
-    // ssl: { rejectUnauthorized: false },
-    host : '127.0.0.1',
+    ssl: { rejectUnauthorized: false },
+    host : process.env.DATABASE_HOST,
     port : 5432,
-    user : 'thomaspaulino',
-    password : '',
-    database : 'smart-brain'
+    user : process.env.DATABASE_USER,
+    password : process.env.DATABASE_PW,
+    database : process.env.DATABASE_DB
   }
 });
 // host : '127.0.0.1',
