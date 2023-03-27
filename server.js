@@ -19,12 +19,6 @@ const db = knex({
     database : process.env.DATABASE_DB
   }
 });
-db.connect(function (err){
-  if(err)
-      console.log(err);
-  else
-      console.log("Connected!");
-});
 
 const app = express();
 app.use(express.json());
