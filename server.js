@@ -16,10 +16,20 @@ const db = knex({
     port : 5432,
     user : process.env.DATABASE_USER,
     password : process.env.DATABASE_PW,
-    database : process.env.DATABASE_DB,
-    idleTimeoutMillis: 0,
-    connectionTimeoutMillis: 0
-  }
+    database : process.env.DATABASE_DB
+  },
+  pool: {
+    min: 0,
+    max: 7,
+    acquireTimeoutMillis: 300000,
+    createTimeoutMillis: 300000,
+    destroyTimeoutMillis: 50000,
+    idleTimeoutMillis: 300000,
+    reapIntervalMillis: 10000,
+    createRetryIntervalMillis: 2000,
+    propagateCreateError: false
+  },
+  acquireConnectionTimeout: 60000
 });
 // host : '127.0.0.1',
 // port : 5432,
