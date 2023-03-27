@@ -12,11 +12,11 @@ const db = knex({
   client: 'pg',
   connection: {
     ssl: { rejectUnauthorized: false },
-    host : process.env.DATABASE_HOST,
+    host : 'dpg-cgf5fbseoogqfc3ms9s0-a.ohio-postgres.render.com',
     port : 5432,
-    user : process.env.DATABASE_USER,
-    password : process.env.DATABASE_PW,
-    database : process.env.DATABASE_DB
+    user : 'mydb_aan0_user',
+    password : 'JGkKzSoTyAkcB67BdK35Kjf2peaDC2oF',
+    database : 'mydb_aan0'
   }
 });
 
