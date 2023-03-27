@@ -1,5 +1,5 @@
 
-const handleApiCall = (req, res) => {
+const handleApiCall = (req, res, fetch) => {
   const PAT = process.env.API_CLARIFAI;
   // Specify the correct user_id/app_id pairings
   // Since you're making inferences outside your app's scope
