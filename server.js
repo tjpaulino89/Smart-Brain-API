@@ -33,18 +33,6 @@ const db = knex({
   },
   acquireConnectionTimeout: 60000
 });
-// host : '127.0.0.1',
-// port : 5432,
-// user : 'thomaspaulino',
-// password : '',
-// database : 'smart-brain'
-
-// ssl: { rejectUnauthorized: false },
-// host : process.env.DATABASE_HOST,
-// port : 5432,
-// user : process.env.DATABASE_USER,
-// password : process.env.DATABASE_PW,
-// database : process.env.DATABASE_DB
 
 const app = express();
 app.use(express.json());
